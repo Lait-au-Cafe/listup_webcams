@@ -10,12 +10,6 @@
 	#pragma message("Platform: Windows")
 	#include <mfapi.h>
 	#include <mfidl.h>
-	#include <mferror.h>
-
-//	#pragma message(lib, "mfplat.lib")
-
-	struct IMFAttributes;
-	struct IMActivate;
 #endif
 
 void listup_webcams() {
@@ -68,7 +62,6 @@ void listup_webcams() {
 		return;
 	}
 
-//	IMFMediaSources *p_src = NULL;
 	IMFActivate **pp_devices = NULL;
 	UINT32 count;
 	hr = MFEnumDeviceSources(p_attr, &pp_devices, &count);
