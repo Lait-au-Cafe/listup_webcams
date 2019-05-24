@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 3.0)
 project(listup_webcams)
 add_executable(listup_webcams source.cpp)
 
-if(__linux__)
+if(UNIX AND NOT APPLE)
     message(STATUS "Platform: Linux")
     SET(CMAKE_CXX_FLAGS "-std=c++11 -g -O3")
 endif()

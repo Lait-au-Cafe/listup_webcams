@@ -2,7 +2,7 @@
 #include <string>
 
 #ifdef __linux__
-	#pragma message("Platform: Linux")
+	#pragma print("Platform: Linux")
 	#include <fcntl.h>
 	#include <sys/ioctl.h>
 	#include <linux/videodev2.h>
